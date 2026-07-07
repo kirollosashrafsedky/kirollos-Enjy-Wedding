@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Kirollos & Enjy | Wedding Invitation</title>
+
+        <meta
+            name="description"
+            content="Together with our families, we invite you to celebrate our wedding."
+        />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <!-- ===================== -->
+        <!-- LOADER -->
+        <!-- ===================== -->
+
+        <div id="loader">
+            <div class="loader-content">
+                <h2>Kirollos & Enjy</h2>
+
+                <p>Loading Invitation...</p>
+            </div>
+        </div>
+
+        <!-- ===================== -->
+        <!-- MUSIC -->
+        <!-- ===================== -->
+
+        <audio id="bgMusic" loop>
+            <source src="assets/music.mp3" type="audio/mp3" />
+        </audio>
+
+        <button id="musicBtn">♫</button>
+
+        <!-- ===================== -->
+        <!-- HERO -->
+        <!-- ===================== -->
+
+        <header class="hero">
+            <div class="overlay"></div>
+
+            <div class="hero-content">
+                <h3>Together with their families</h3>
+
+                <h1>Kirollos <span>&</span> Enjy</h1>
+
+                <p class="tagline">Invite You To Celebrate Their Wedding</p>
+
+                <p class="verse">
+                    "Many waters cannot quench love; rivers cannot sweep it
+                    away."
+
+                    <br />
+
+                    <strong>Song of Songs 8:7</strong>
+                </p>
+
+                <a href="#countdown" class="btn"> Open Invitation </a>
+            </div>
+        </header>
+
+        <section class="invitation-card">
+            <h2>Wedding Invitation</h2>
+
+            <img src="assets/invitation.png" alt="Wedding Invitation" />
+        </section>
+
+        <!-- ===================== -->
+        <!-- COUNTDOWN -->
+        <!-- ===================== -->
+
+        <section id="countdown">
+            <h2>Counting Down</h2>
+
+            <div class="countdown-container">
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <small>Days</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <small>Hours</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <small>Minutes</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <small>Seconds</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== -->
+        <!-- EVENT -->
+        <!-- ===================== -->
+
+        <section class="event">
+            <h2>Wedding Details</h2>
+
+            <div class="card">
+                <h3>📅 Sunday, July 26, 2026</h3>
+
+                <p>🕖 7:00 PM</p>
+
+                <p>⛪ St. Mary Church - El Rehab</p>
+
+                <a href="https://maps.google.com" target="_blank" class="btn">
+                    View Location
+                </a>
+            </div>
+        </section>
+
+        <!-- ===================== -->
+        <!-- OUR STORY -->
+        <!-- ===================== -->
+
+        <section class="story">
+            <h2>Our Story</h2>
+
+            <p>
+                Every love story is beautiful, but ours is our favorite. We are
+                grateful to God for bringing us together and can't wait to begin
+                this new chapter surrounded by the people we love most.
+            </p>
+        </section>
+
+        <section class="timeline">
+            <h2>Our Journey</h2>
+
+            <div class="timeline-item">
+                <h3>❤️ We Met</h3>
+
+                <p>God brought our paths together.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>💍 We Got Engaged</h3>
+
+                <p>A beautiful beginning of forever.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>👰 Wedding Day</h3>
+
+                <p>26 July 2026</p>
+            </div>
+        </section>
+        <!-- ===================== -->
+        <!-- GALLERY -->
+        <!-- ===================== -->
+
+        <section class="gallery">
+            <h2>Our Memories</h2>
+
+            <div class="gallery-grid">
+                <img src="assets/gallery/photo1.jpg" alt="" />
+
+                <img src="assets/gallery/photo2.jpg" alt="" />
+
+                <img src="assets/gallery/photo3.jpg" alt="" />
+
+                <img src="assets/gallery/photo4.jpg" alt="" />
+
+                <img src="assets/gallery/photo5.jpg" alt="" />
+
+                <img src="assets/gallery/photo6.jpg" alt="" />
+            </div>
+        </section>
+
+        <!-- ===================== -->
+        <!-- RSVP -->
+        <!-- ===================== -->
+
+        <section class="rsvp">
+            <h2>Will You Celebrate With Us?</h2>
+
+            <p>We would be honored to have you share this special day.</p>
+
+            <form>
+                <input type="text" placeholder="Your Name" required />
+
+                <select>
+                    <option>Accepts with Joy ❤️</option>
+
+                    <option>Sadly Can't Attend</option>
+                </select>
+
+                <textarea placeholder="Leave us a message..."></textarea>
+
+                <button type="submit">Send RSVP</button>
+            </form>
+        </section>
+
+        <!-- ===================== -->
+        <!-- FOOTER -->
+        <!-- ===================== -->
+
+        <footer>
+            <h2>Kirollos ❤️ Enjy</h2>
+
+            <p>We can't wait to celebrate with you.</p>
+        </footer>
+
+        <!-- Floating Flowers -->
+
+        <div id="flowers"></div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
