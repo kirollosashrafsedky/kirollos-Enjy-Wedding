@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
         loader.style.opacity = "0";
 
         loader.style.visibility = "hidden";
-    }, 1500);
+    }, 1000);
 });
 
 /* ==========================================
@@ -94,7 +94,7 @@ const observer = new IntersectionObserver(
         });
     },
     {
-        threshold: 0.15,
+        threshold: 0.01,
     },
 );
 
@@ -140,7 +140,7 @@ setInterval(createFlower, 500);
    IMAGE LIGHTBOX
 ========================================== */
 
-const images = document.querySelectorAll(".gallery img");
+const images = document.querySelectorAll(".story-image img");
 
 const lightbox = document.createElement("div");
 
