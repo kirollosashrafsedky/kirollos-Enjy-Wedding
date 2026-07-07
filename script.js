@@ -208,7 +208,7 @@ We can't wait to celebrate with you!`,
 window.addEventListener("scroll", () => {
     const hero = document.querySelector(".hero");
 
-    hero.style.backgroundPositionY = window.pageYOffset * -0.2 + "px";
+    hero.style.backgroundPositionY = window.pageYOffset * 0.2 + "px";
 });
 
 /* ==========================================
