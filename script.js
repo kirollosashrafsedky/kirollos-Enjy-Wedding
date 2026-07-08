@@ -140,7 +140,9 @@ setInterval(createFlower, 500);
    IMAGE LIGHTBOX
 ========================================== */
 
-const images = document.querySelectorAll(".story-image img");
+const images = document.querySelectorAll(
+    ".story-image img, .invitation-card img",
+);
 
 const lightbox = document.createElement("div");
 
@@ -185,18 +187,50 @@ lightbox.addEventListener("click", () => {
 
 const form = document.querySelector(".rsvp form");
 
+const modal = document.getElementById("thankYouModal");
+
+const modalMessage = document.getElementById("modalMessage");
+
+const modalClose = document.getElementById("modalClose");
+
+modalClose.addEventListener("click", () => {
+    modal.classList.remove("active");
+});
+
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) modal.classList.remove("active");
+});
+
 form.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const name = form.querySelector("input").value;
 
-    alert(
-        `Thank you, ${name}! ❤️
+    const attending = form.querySelector("select").value;
 
-Your RSVP has been received.
+    const message = form.querySelector("textarea").value;
 
-We can't wait to celebrate with you!`,
+    const formUrl =
+        "https://docs.google.com/forms/d/e/1FAIpQLScQX6-x699mQxlfECO0W7weUWpRKfyLjxVXfIqYds8D5tO6ZA/formResponse";
+
+    const data = new FormData();
+
+    data.append("entry.610443421", name);
+
+    data.append("entry.1052894339", attending);
+
+    data.append("entry.1434385732", message);
+
+    fetch(formUrl, { method: "POST", body: data, mode: "no-cors" }).catch(
+        () => {},
     );
+
+    modalMessage.innerHTML =
+        attending === "yes"
+            ? `We're so happy you'll be joining us, <strong>${name}</strong>! 🎉<br>We can't wait to celebrate with you!`
+            : `Thank you for letting us know, <strong>${name}</strong>.<br>You'll be missed, but we're grateful for your love and wishes! ❤️`;
+
+    modal.classList.add("active");
 
     form.reset();
 });

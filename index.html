@@ -70,7 +70,17 @@
                     <strong>Matthew 19:6</strong>
                 </p>
 
-                <a href="#invitation-card" class="btn"> Open Invitation </a>
+                <div class="hero-buttons">
+                    <a href="#invitation-card" class="btn"> Open Invitation </a>
+
+                    <a
+                        href="https://photos.app.goo.gl/LBga16faE1TPWpPa9"
+                        target="_blank"
+                        class="btn btn-secondary"
+                    >
+                        📷 Share Your Moments
+                    </a>
+                </div>
             </div>
         </header>
 
@@ -122,7 +132,11 @@
 
                 <p>🕖 7:00 PM</p>
 
-                <p>⛪ St. Mary Church - El Rehab</p>
+                <p>
+                    ⛪ St. Mary Church - El Rehab
+                    <br />
+                    Parking available in Gateway Mall, next to the church
+                </p>
 
                 <a
                     href="https://www.google.com/maps/place/St.Mary+Church+-+El+Rehab/@30.0652754,31.4763407,17z/data=!3m1!4b1!4m6!3m5!1s0x1458186e504a28e5:0x27a8700e89fa6ccc!8m2!3d30.0652754!4d31.4763407!16s%2Fg%2F1hm3th96z!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDcwNS4wIKXMDSoASAFQAw%3D%3D"
@@ -223,10 +237,71 @@
                     </div>
                     <div class="story-dot"></div>
                     <div class="story-image">
-                        <img src="assets/wedding.jpg" alt="Wedding Day" />
+                        <img src="assets/wedding.jpeg" alt="Wedding Day" />
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- ===================== -->
+        <!-- SHARE MOMENTS -->
+        <!-- ===================== -->
+
+        <section class="share-moments">
+            <h2>Share Your Moments</h2>
+
+            <p class="share-intro">
+                Every smile, every tear of joy, every dance — we want to see it
+                all. Join our shared album and help us relive this beautiful day
+                through your eyes.
+            </p>
+
+            <div class="polaroid-stack">
+                <div class="polaroid p1">
+                    <div class="polaroid-inner"></div>
+                    <span>your smile ❤️</span>
+                </div>
+
+                <div class="polaroid p2">
+                    <div class="polaroid-inner"></div>
+                    <span>your joy ✨</span>
+                </div>
+
+                <div class="polaroid p3">
+                    <div class="polaroid-inner"></div>
+                    <span>your dance 💃</span>
+                </div>
+            </div>
+
+            <a
+                href="https://photos.app.goo.gl/LBga16faE1TPWpPa9"
+                target="_blank"
+                class="share-btn"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path
+                        d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"
+                    />
+                    <circle cx="12" cy="13" r="4" />
+                </svg>
+
+                Open Our Shared Album
+            </a>
+
+            <p class="share-hint">
+                📱 Open on your phone &nbsp;·&nbsp; Upload directly from Google
+                Photos
+            </p>
         </section>
 
         <!-- ===================== -->
@@ -242,14 +317,16 @@
                 <input type="text" placeholder="Your Name" required />
 
                 <select>
-                    <option>Accepts with Joy ❤️</option>
+                    <option value="yes">Accepts with Joy ❤️</option>
 
-                    <option>Sadly Can't Attend</option>
+                    <option value="no">Sadly Can't Attend</option>
                 </select>
 
-                <textarea placeholder="Leave us a message..."></textarea>
+                <textarea
+                    placeholder="Share your wishes, a favourite memory, or a little prayer for us — we'd love to treasure your words on our special day 💛"
+                ></textarea>
 
-                <button type="submit">Send RSVP</button>
+                <button type="submit">Send</button>
             </form>
         </section>
 
@@ -262,6 +339,20 @@
 
             <p>We can't wait to celebrate with you.</p>
         </footer>
+
+        <!-- ===================== -->
+        <!-- THANK YOU MODAL -->
+        <!-- ===================== -->
+
+        <div id="thankYouModal" class="modal-overlay">
+            <div class="modal-box">
+                <h2>Kirollos ❤️ Enjy</h2>
+
+                <p id="modalMessage"></p>
+
+                <button id="modalClose">Close</button>
+            </div>
+        </div>
 
         <!-- Floating Flowers -->
 
